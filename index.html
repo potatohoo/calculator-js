@@ -17,9 +17,41 @@
             <option value="mul">Multiply</option>
             <option value="div">Division</option>
         </select>
-        <button id="calculate">Calculate</button>
+        <button id="calculate" onclick="calculate()">Calculate</button>
     </div>
-    <script src="script.js">
+    <script>
+function calculate(){
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let operator = document.getElementById("operation").value;
+
+    if (operator=="add"){
+        res= num1 + num2;
+        alert("the answer is " + res)
+    }
+    else if (operator=="sub"){
+        res= num1 - num2;
+        alert("the answer is " + res)
+    }
+    else if (operator=="mul"){
+        res= num1 * num2;
+        alert("the answer is " + res);
+    }
+    else if (operator=="div"){
+        if (num2==0){
+            alert("Error: Division by zero is not allowed");
+        }
+        else{
+            res= num1 / num2;
+            alert("the answer is " + res)
+        }
+    }
+    
+    
+}
+
+    </script>
+    <!-- <script src="script.js"> -->
     </script>
 </body>
 </html>
