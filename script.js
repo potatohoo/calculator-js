@@ -11,7 +11,13 @@ function calculate(){
     else if (operator=="sub"){
         return num1 - num2;
     }
-
+    else if (operator=="mul"){
+        return num1 * num2;
+    }
+    else if (operator=="div"){
+        return num1 / num2;
+    }
+    
 }
 
 submitButton.addEventListener("click",calculate())
