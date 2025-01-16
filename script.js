@@ -6,17 +6,23 @@ function calculate(){
     let operator = document.getElementById("operation").value;
 
     if (operator=="add"){
-        return num1 + num2;
+        res= num1 + num2;
     }
     else if (operator=="sub"){
-        return num1 - num2;
+        res= num1 - num2;
     }
     else if (operator=="mul"){
-        return num1 * num2;
+        res= num1 * num2;
     }
     else if (operator=="div"){
-        return num1 / num2;
+        if (num2==0){
+            alert("Error: Division by zero is not allowed");
+        }
+        else{
+            res= num1 / num2;
+        }
     }
+    alert("the answer is " + res)
     
 }
 
